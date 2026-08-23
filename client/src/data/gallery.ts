@@ -1,33 +1,33 @@
-/** Arquitetura de Âmbar: galeria demonstrativa, preparada para GET /api/gallery/. */
+/** Arquitetura de Âmbar: galeria de materiais e rituais de compra de ouro, pronta para futura API. */
 import type { GalleryItem } from "../types/content";
 
 export const galleryItems: GalleryItem[] = [
   {
-    id: "gallery-1",
-    title: "Identidade em presença",
-    category: "Marca",
-    image: "/manus-storage/jinitomoniz1_f8560394.jpg",
-    ratio: "tall",
+    id: "gold-assessment",
+    title: "Avaliação atenta",
+    category: "Análise",
+    image: "/manus-storage/ouversaria-gold-assessment_4d74d530.jpg",
+    ratio: "landscape",
   },
   {
-    id: "gallery-2",
-    title: "Ritual de seleção",
-    category: "Curadoria",
-    image: "/manus-storage/ouversaria-gallery-materials_e4d308e8.png",
+    id: "gold-bars",
+    title: "Valor material",
+    category: "Ouro",
+    image: "/manus-storage/ouversaria-gold-bars_cc1b68c9.jpg",
     ratio: "portrait",
   },
   {
-    id: "gallery-3",
-    title: "Conversa que orienta",
-    category: "Atendimento",
-    image: "/manus-storage/jinitomoniz3_4306257a.jpg",
+    id: "gold-jewelry",
+    title: "Peças em detalhe",
+    category: "Joalharia",
+    image: "/manus-storage/ouversaria-gold-detail_f3ccf97d.jpg",
     ratio: "square",
   },
   {
-    id: "gallery-4",
-    title: "Método partilhado",
-    category: "Processo",
-    image: "/manus-storage/ouversaria-project-atelier_55f68d2a.png",
-    ratio: "landscape",
+    id: "founder-presence",
+    title: "Atendimento pessoal",
+    category: "Jinito Móniz",
+    image: "/manus-storage/jinito-moniz-founder_200b8f31.jpg",
+    ratio: "tall",
   },
 ];

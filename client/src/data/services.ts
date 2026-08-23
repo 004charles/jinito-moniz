@@ -1,37 +1,33 @@
-/** Arquitetura de Âmbar: serviços separados da interface para uma futura origem de dados. */
+/** Arquitetura de Âmbar: serviços de compra de ouro separados da interface para futura origem de dados. */
 import type { Service } from "../types/content";
 
 export const services: Service[] = [
   {
-    id: "compra-ouro",
+    id: "avaliacao-ouro",
     order: "01",
-    title: "Compra de ouro",
-    description:
-      "Atendimento reservado para quem procura transformar ativos em decisões seguras e bem acompanhadas.",
-    icon: "coins",
-  },
-  {
-    id: "venda-ouro",
-    order: "02",
-    title: "Venda de ouro",
-    description:
-      "Uma seleção orientada por clareza, apresentação cuidada e atenção a cada detalhe do processo.",
+    title: "Avaliação de ouro",
+    description: "Analisamos as suas peças com atenção aos detalhes relevantes antes de apresentar qualquer proposta.",
     icon: "scale",
   },
   {
-    id: "avaliacao",
+    id: "proposta-compra",
+    order: "02",
+    title: "Proposta de compra",
+    description: "Depois da avaliação, explicamos a proposta de compra de forma direta, reservada e sem pressão.",
+    icon: "coins",
+  },
+  {
+    id: "analise-pecas",
     order: "03",
-    title: "Avaliação de peças",
-    description:
-      "Leitura criteriosa de peças e materiais, com uma conversa direta sobre os próximos passos possíveis.",
+    title: "Análise de peças",
+    description: "Joias, correntes, anéis e outros artigos em ouro são observados com critério e cuidado.",
     icon: "shield",
   },
   {
-    id: "parcerias",
+    id: "atendimento-reservado",
     order: "04",
-    title: "Parcerias privadas",
-    description:
-      "Relações profissionais desenhadas para responder a necessidades específicas com discrição e método.",
+    title: "Atendimento reservado",
+    description: "Um atendimento organizado para que possa falar sobre o seu ouro com discrição e tranquilidade.",
     icon: "handshake",
   },
 ];

@@ -76,3 +76,9 @@ O logótipo é um **monograma OJM abstrato**: três traços geométricos formam 
 - Evitar gradientes roxos, néon e cartões excessivamente arredondados.
 - Usar fotos fornecidas como presença editorial da marca, com sobreposições que garantam legibilidade.
 - Tratar dados de estatística e testemunhos como conteúdos de demonstração claramente identificáveis, sem lhes atribuir factualidade.
+
+### Estilo decisório
+
+- O monograma OJM funciona como assinatura estrutural: coordenadas e marcas de canto em âmbar acompanham títulos, painéis e imagens-chave.
+- Em cada grelha importante, um painel dominante ou deslocado quebra a regularidade e preserva o ritmo de publicação arquitetónica.
+- CTAs secundários indicam sempre a próxima decisão concreta, substituindo rótulos genéricos por ações ligadas à avaliação e compra de ouro.

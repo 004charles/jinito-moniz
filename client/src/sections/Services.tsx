@@ -1,16 +1,18 @@
-/** Arquitetura de Âmbar: cartões verticais de serviço usam numeração e linhas para orientar a leitura. */
+/** Arquitetura de Âmbar: percurso de compra assimétrico, com o primeiro passo como painel dominante. */
 import { motion } from "framer-motion";
-import { Coins, Handshake, Scale, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, Coins, Handshake, Scale } from "lucide-react";
+import CornerMark from "../components/CornerMark";
 import SectionHeading from "../components/SectionHeading";
 import { services } from "../data/services";
 
-const icons = { coins: Coins, scale: Scale, shield: ShieldCheck, handshake: Handshake };
+const icons = { coins: Coins, scale: Scale, shield: BadgeCheck, handshake: Handshake };
+const actionLabels = ["Ver o que avaliamos", "Entender a proposta", "Conhecer as peças", "Marcar atendimento"];
 
 export default function Services() {
   return (
     <section id="servicos" className="relative overflow-hidden bg-[#12110f] px-5 py-24 sm:px-8 lg:px-12 lg:py-32"><div className="absolute -right-32 top-0 h-96 w-96 rounded-full bg-[#D59A42]/[.07] blur-[110px]" />
-      <div className="relative mx-auto max-w-[1320px]"><SectionHeading index="02" eyebrow="O que fazemos" title="Os nossos serviços" description="Estruturamos o atendimento em torno do que cada situação pede: orientação, avaliação, seleção e relação profissional." />
-        <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-4">{services.map((service, index) => { const Icon = icons[service.icon]; return <motion.article initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ delay: index * 0.07, duration: 0.48 }} key={service.id} className="service-card group min-h-[292px] bg-[#12110f] p-6 sm:p-7"><div className="flex items-start justify-between"><span className="font-mono text-xs text-[#D59A42]">{service.order}</span><Icon size={22} className="text-[#e7ddcf] transition duration-300 group-hover:-translate-y-1 group-hover:text-[#D59A42]" /></div><div className="mt-16"><h3 className="font-display text-3xl text-[#f5eddc]">{service.title}</h3><p className="mt-4 text-sm leading-6 text-white/58">{service.description}</p></div><div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#D59A42] opacity-0 transition duration-300 group-hover:opacity-100">Saber mais <ArrowUpRight size={15} /></div></motion.article>})}</div>
+      <div className="relative mx-auto max-w-[1320px]"><SectionHeading index="02" eyebrow="Como ajudamos" title="Um processo de compra sem complicação." description="Do primeiro contacto à proposta, cada etapa existe para tornar a compra do seu ouro mais clara, reservada e segura." />
+        <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-6">{services.map((service, index) => { const Icon = icons[service.icon]; const dominant = index === 0; const span = dominant ? "xl:col-span-3 xl:row-span-2 xl:min-h-[602px]" : index === 1 ? "xl:col-span-3" : index === 2 ? "xl:col-span-2" : "xl:col-span-1"; return <motion.article initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ delay: index * 0.07, duration: 0.48 }} key={service.id} className={`service-card group relative min-h-[292px] bg-[#12110f] p-6 sm:p-7 ${span} ${dominant ? "bg-[#18150f]" : ""}`}><CornerMark coordinate={`OJM.0${index + 2}`} position={dominant ? "bottom-right" : "top-right"} className="opacity-60" /><div className="flex items-start justify-between"><span className="font-mono text-xs text-[#D59A42]">{service.order}</span><Icon size={dominant ? 28 : 22} className="text-[#e7ddcf] transition duration-300 group-hover:-translate-y-1 group-hover:text-[#D59A42]" /></div><div className={dominant ? "mt-32 max-w-md" : "mt-16"}><p className="font-mono text-[0.62rem] tracking-[0.16em] text-[#D59A42]/75">{dominant ? "ETAPA ESSENCIAL" : "COMPRA DE OURO"}</p><h3 className={`mt-3 font-display text-[#f5eddc] ${dominant ? "text-5xl sm:text-6xl" : "text-3xl"}`}>{service.title}</h3><p className={`mt-4 leading-6 text-white/58 ${dominant ? "text-base sm:text-lg" : "text-sm"}`}>{service.description}</p></div><div className="mt-7 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#D59A42] transition duration-300 group-hover:translate-x-1">{actionLabels[index]} <ArrowUpRight size={15} /></div></motion.article>})}</div>
       </div>
     </section>
   );

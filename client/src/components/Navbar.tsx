@@ -1,4 +1,4 @@
-/** Arquitetura de Âmbar: navegação fixa, de contraste garantido, com painel móvel preciso e contido. */
+/** Arquitetura de Âmbar: navegação escura, editorial e discreta para uma marca de compra de ouro. */
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -8,8 +8,8 @@ const navigation = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre nós", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Galeria", href: "#galeria" },
+  { label: "Como funciona", href: "#projetos" },
+  { label: "Ouro em detalhe", href: "#galeria" },
   { label: "Contactos", href: "#contactos" },
 ];
 
@@ -33,9 +33,7 @@ export default function Navbar() {
         <nav className="hidden items-center gap-7 xl:flex" aria-label="Navegação principal">
           {navigation.map((item) => <a key={item.href} href={item.href} className="nav-link">{item.label}</a>)}
         </nav>
-        <div className="hidden lg:block">
-          <a href="#contactos" className="button-primary button-small">Fale connosco <ArrowUpRight size={16} /></a>
-        </div>
+        <div className="hidden lg:block"><a href="#contactos" className="button-primary button-small">Avaliar o meu ouro <ArrowUpRight size={16} /></a></div>
         <button type="button" className="grid h-11 w-11 place-items-center border border-white/15 text-white xl:hidden" onClick={() => setOpen(true)} aria-label="Abrir menu" aria-expanded={open}><Menu size={21} /></button>
       </div>
       <AnimatePresence>
@@ -46,7 +44,7 @@ export default function Navbar() {
               <nav className="mt-14 flex flex-col" aria-label="Navegação móvel">
                 {navigation.map((item, index) => <motion.a initial={{ x: 18, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.05 * index + 0.08 }} key={item.href} href={item.href} onClick={closeMenu} className="border-t border-white/10 py-5 font-display text-4xl text-[#f5eddc] transition hover:text-[#D59A42]">{item.label}</motion.a>)}
               </nav>
-              <div className="mt-auto border-t border-white/10 pt-6"><a onClick={closeMenu} href="#contactos" className="button-primary w-full justify-center">Fale connosco <ArrowUpRight size={17} /></a><p className="mt-5 text-xs leading-5 text-white/45">Jinito Móniz · compra e venda de ouro</p></div>
+              <div className="mt-auto border-t border-white/10 pt-6"><a onClick={closeMenu} href="#contactos" className="button-primary w-full justify-center">Avaliar o meu ouro <ArrowUpRight size={17} /></a><p className="mt-5 text-xs leading-5 text-white/45">Jinito Móniz · compra de ouro</p></div>
             </motion.div>
           </motion.div>
         )}

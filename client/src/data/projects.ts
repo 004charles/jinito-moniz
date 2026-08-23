@@ -1,32 +1,29 @@
-/** Arquitetura de Âmbar: projetos demonstrativos, prontos para trocar por respostas de GET /api/projects/. */
+/** Arquitetura de Âmbar: etapas visuais do atendimento, preparadas para futura origem de dados. */
 import type { Project } from "../types/content";
 
 export const projects: Project[] = [
   {
-    id: "experiencia-privada",
-    title: "Experiência privada",
-    category: "Atendimento",
-    description:
-      "Um ambiente de atendimento pensado para que a conversa aconteça com conforto, tempo e atenção total.",
-    image: "/manus-storage/ouversaria-project-atelier_55f68d2a.png",
+    id: "avaliacao-criteriosa",
+    title: "Avaliação criteriosa",
+    category: "Primeiro passo",
+    description: "A peça é observada com atenção para que a conversa comece com informação clara.",
+    image: "/manus-storage/ouversaria-gold-assessment_4d74d530.jpg",
     layout: "feature",
   },
   {
-    id: "presenca-editorial",
-    title: "Presença editorial",
-    category: "Marca",
-    description:
-      "Uma linguagem visual que aproxima a imagem da marca de uma experiência premium e contemporânea.",
-    image: "/manus-storage/jinitomoniz3_4306257a.jpg",
+    id: "materia-em-detalhe",
+    title: "Ouro em detalhe",
+    category: "Material",
+    description: "Cada artigo é considerado pelo que apresenta, com respeito pelo seu valor e contexto.",
+    image: "/manus-storage/ouversaria-gold-detail_f3ccf97d.jpg",
     layout: "standard",
   },
   {
-    id: "curadoria-detalhe",
-    title: "Curadoria de detalhe",
-    category: "Seleção",
-    description:
-      "Da primeira referência ao acabamento final, o padrão de avaliação é mantido em cada escolha.",
-    image: "/manus-storage/ouversaria-gallery-materials_e4d308e8.png",
+    id: "proposta-reservada",
+    title: "Proposta reservada",
+    category: "Atendimento",
+    description: "Uma proposta de compra explicada com clareza, num ambiente calmo e profissional.",
+    image: "/manus-storage/ouversaria-gold-bars_cc1b68c9.jpg",
     layout: "standard",
   },
 ];

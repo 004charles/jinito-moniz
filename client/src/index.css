@@ -79,10 +79,15 @@
   .project-card:hover::before { @apply border-[#D59A42]/70; }
   .gallery-tile { @apply transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D59A42] focus-visible:ring-offset-4 focus-visible:ring-offset-[#eee8dd]; }
   .signature-corner { @apply pointer-events-none absolute h-11 w-11 border-[#D59A42]/85; }
+  .signature-coordinate { @apply absolute whitespace-nowrap font-mono text-[0.55rem] font-medium tracking-[0.17em] text-[#D59A42]/75; }
   .signature-corner-top-right { @apply right-0 top-0 border-r border-t; }
+  .signature-corner-top-right .signature-coordinate { @apply -bottom-3 right-0; }
   .signature-corner-top-left { @apply left-0 top-0 border-l border-t; }
+  .signature-corner-top-left .signature-coordinate { @apply -bottom-3 left-0; }
   .signature-corner-bottom-right { @apply bottom-0 right-0 border-b border-r; }
+  .signature-corner-bottom-right .signature-coordinate { @apply -top-3 right-0; }
   .signature-corner-bottom-left { @apply bottom-0 left-0 border-b border-l; }
+  .signature-corner-bottom-left .signature-coordinate { @apply -top-3 left-0; }
   .signature-corner-light { @apply border-[#a36916]/70; }
   .field-label { @apply mb-2 block text-[0.66rem] font-extrabold uppercase tracking-[0.14em] text-[#5f564b]; }
   .field-control { @apply w-full border border-[#c9bda9] bg-[#f5efe5] px-3 py-3 text-sm text-[#201c17] shadow-none transition placeholder:text-[#8c8274] hover:border-[#aa967b] focus:border-[#b77618] focus:outline-none; }

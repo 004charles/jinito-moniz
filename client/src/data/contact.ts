@@ -1,4 +1,4 @@
-/** Arquitetura de Âmbar: central de configuração dos contactos — sem números ou endereços inventados. */
+/** Arquitetura de Âmbar: contactos centralizados e preparados para a futura origem de dados. */
 import type { ContactChannel } from "../types/content";
 
 export const contact = {
@@ -8,7 +8,7 @@ export const contact = {
   address: { label: "Morada", value: "Morada a configurar", isConfigured: false } satisfies ContactChannel,
   hours: "Segunda a sábado · Horário a confirmar",
   whatsappNumber: "",
-  whatsappMessage: "Olá, gostaria de saber mais sobre a Ouversaria Jinito Moniz.",
+  whatsappMessage: "Olá, gostaria de agendar uma avaliação para venda do meu ouro.",
   socialLinks: [
     { label: "Instagram", href: "#", isConfigured: false },
     { label: "Facebook", href: "#", isConfigured: false },
