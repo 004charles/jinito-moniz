@@ -1,25 +1,36 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/** Arquitetura de Âmbar: página única editorial, com secções modulares e dados externos à composição. */
+import Navbar from "../components/Navbar";
+import WhatsAppButton from "../components/WhatsAppButton";
+import About from "../sections/About";
+import CTA from "../sections/CTA";
+import Contact from "../sections/Contact";
+import Differentials from "../sections/Differentials";
+import Footer from "../sections/Footer";
+import Gallery from "../sections/Gallery";
+import Hero from "../sections/Hero";
+import Projects from "../sections/Projects";
+import Services from "../sections/Services";
+import Stats from "../sections/Stats";
+import Testimonials from "../sections/Testimonials";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen overflow-x-clip bg-[#0b0a08] font-sans">
+      <Navbar />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <About />
+        <Services />
+        <Projects />
+        <Gallery />
+        <Differentials />
+        <Stats />
+        <Testimonials />
+        <CTA />
+        <Contact />
       </main>
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

@@ -1,13 +1,16 @@
+/* Arquitetura de Âmbar: obsidiana, marfim e Âmbar Jinito; contraste alto, textura subtil e ritmos editoriais. */
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -27,151 +30,67 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: oklch(0.13 0.006 75);
+  --foreground: oklch(0.93 0.015 80);
+  --card: oklch(0.17 0.008 75);
+  --card-foreground: oklch(0.93 0.015 80);
+  --popover: oklch(0.17 0.008 75);
+  --popover-foreground: oklch(0.93 0.015 80);
+  --primary: oklch(0.71 0.13 74);
+  --primary-foreground: oklch(0.15 0.01 75);
+  --secondary: oklch(0.22 0.01 75);
+  --secondary-foreground: oklch(0.93 0.015 80);
+  --muted: oklch(0.22 0.01 75);
+  --muted-foreground: oklch(0.69 0.018 75);
+  --accent: oklch(0.71 0.13 74);
+  --accent-foreground: oklch(0.15 0.01 75);
+  --destructive: oklch(0.58 0.2 28);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 13%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.71 0.13 74);
 }
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
-}
+.dark { color-scheme: dark; }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
-  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; background: #0b0a08; }
+  body { @apply bg-background text-foreground; min-width: 320px; }
+  ::selection { background: #d59a42; color: #11100e; }
+  a, button, input, textarea { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled), [role="button"]:not([aria-disabled="true"]), a[href] { cursor: pointer; }
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #D59A42; outline-offset: 3px; }
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
-  }
+  .nav-link { @apply relative text-xs font-bold uppercase tracking-[0.12em] text-white/72 transition duration-200 hover:text-[#f7d28b]; }
+  .nav-link::after { content: ""; @apply absolute -bottom-2 left-0 h-px w-0 bg-[#D59A42] transition-all duration-200; }
+  .nav-link:hover::after { @apply w-full; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 bg-[#D59A42] px-5 text-xs font-extrabold uppercase tracking-[0.1em] text-[#17120a] transition duration-200 hover:-translate-y-0.5 hover:bg-[#edbc68] active:translate-y-0 active:scale-[0.97]; }
+  .button-small { @apply min-h-10 px-4 text-[0.68rem]; }
+  .button-outline { @apply inline-flex min-h-12 items-center justify-center gap-2 border border-white/25 bg-black/10 px-5 text-xs font-extrabold uppercase tracking-[0.1em] text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#D59A42] hover:text-[#f7d28b] active:translate-y-0 active:scale-[0.97]; }
+  .service-card { @apply transition duration-300 hover:bg-[#1a1814]; }
+  .project-card { @apply transition duration-300; }
+  .project-card::before { content: ""; @apply absolute inset-0 z-[1] border border-white/0 transition duration-300; }
+  .project-card:hover::before { @apply border-[#D59A42]/70; }
+  .gallery-tile { @apply transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D59A42] focus-visible:ring-offset-4 focus-visible:ring-offset-[#eee8dd]; }
+  .signature-corner { @apply pointer-events-none absolute h-11 w-11 border-[#D59A42]/85; }
+  .signature-corner-top-right { @apply right-0 top-0 border-r border-t; }
+  .signature-corner-top-left { @apply left-0 top-0 border-l border-t; }
+  .signature-corner-bottom-right { @apply bottom-0 right-0 border-b border-r; }
+  .signature-corner-bottom-left { @apply bottom-0 left-0 border-b border-l; }
+  .signature-corner-light { @apply border-[#a36916]/70; }
+  .field-label { @apply mb-2 block text-[0.66rem] font-extrabold uppercase tracking-[0.14em] text-[#5f564b]; }
+  .field-control { @apply w-full border border-[#c9bda9] bg-[#f5efe5] px-3 py-3 text-sm text-[#201c17] shadow-none transition placeholder:text-[#8c8274] hover:border-[#aa967b] focus:border-[#b77618] focus:outline-none; }
+  .social-icon { @apply grid h-9 w-9 place-items-center border border-white/15 text-white/70 transition hover:border-[#D59A42] hover:text-[#D59A42]; }
+  .footer-link { @apply flex items-center gap-1 text-sm text-white/62 transition hover:translate-x-1 hover:text-[#f7d28b]; }
+  .whatsapp-float { @apply fixed bottom-5 right-5 z-30 grid h-12 w-12 place-items-center rounded-full bg-[#D59A42] text-[#17120a] shadow-[0_12px_34px_rgba(0,0,0,0.32)] transition duration-200 hover:-translate-y-1 hover:bg-[#edbc68] active:scale-[0.95] sm:bottom-7 sm:right-7; }
+}
 
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
-  }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
