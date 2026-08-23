@@ -7,7 +7,7 @@ export const projects: Project[] = [
     title: "Avaliação criteriosa",
     category: "Primeiro passo",
     description: "A peça é observada com atenção para que a conversa comece com informação clara.",
-    image: "/manus-storage/ouversaria-gold-assessment_4d74d530.jpg",
+    image: "/assets/ouversaria-gold-assessment.jpg",
     layout: "feature",
   },
   {
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Ouro em detalhe",
     category: "Material",
     description: "Cada artigo é considerado pelo que apresenta, com respeito pelo seu valor e contexto.",
-    image: "/manus-storage/ouversaria-gold-detail_f3ccf97d.jpg",
+    image: "/assets/ouversaria-gold-detail.jpg",
     layout: "standard",
   },
   {
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Proposta reservada",
     category: "Atendimento",
     description: "Uma proposta de compra explicada com clareza, num ambiente calmo e profissional.",
-    image: "/manus-storage/ouversaria-gold-bars_cc1b68c9.jpg",
+    image: "/assets/ouversaria-gold-bars.jpg",
     layout: "standard",
   },
 ];

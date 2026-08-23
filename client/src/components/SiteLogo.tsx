@@ -1,7 +1,7 @@
 /** Arquitetura de Âmbar: assinatura compacta com monograma dourado e foco explícito em compra de ouro. */
 import { Link } from "react-router-dom";
 
-const logoUrl = "/manus-storage/jinito-moniz-mark_b7a0fafe.png";
+const logoUrl = "/assets/jinito-moniz-mark.png";
 
 interface SiteLogoProps {
   compact?: boolean;

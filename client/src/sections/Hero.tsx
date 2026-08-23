@@ -6,7 +6,7 @@ import CornerMark from "../components/CornerMark";
 export default function Hero() {
   return (
     <section id="inicio" className="relative isolate min-h-[780px] overflow-hidden bg-[#0b0a08] pt-28 text-white lg:min-h-[880px]">
-      <div className="absolute inset-0"><img src="/manus-storage/jinito-moniz-founder_200b8f31.jpg" alt="Jinito Móniz num ambiente de atendimento reservado" className="h-full w-full object-cover object-[58%_center] opacity-72" /><div className="absolute inset-0 bg-[linear-gradient(90deg,#0b0a08_2%,rgba(11,10,8,.95)_31%,rgba(11,10,8,.38)_69%,rgba(11,10,8,.76)_100%)]" /><div className="absolute inset-0 bg-[linear-gradient(0deg,#0b0a08_0%,transparent_34%)]" /></div>
+      <div className="absolute inset-0"><img src="/assets/jinito-moniz-founder.jpg" alt="Jinito Móniz num ambiente de atendimento reservado" className="h-full w-full object-cover object-[58%_center] opacity-72" /><div className="absolute inset-0 bg-[linear-gradient(90deg,#0b0a08_2%,rgba(11,10,8,.95)_31%,rgba(11,10,8,.38)_69%,rgba(11,10,8,.76)_100%)]" /><div className="absolute inset-0 bg-[linear-gradient(0deg,#0b0a08_0%,transparent_34%)]" /></div>
       <div className="absolute right-[7%] top-[19%] h-64 w-64 rounded-full bg-[#D59A42]/15 blur-[110px]" />
       <div className="absolute bottom-0 left-[7%] h-[66%] w-px bg-gradient-to-b from-transparent via-[#D59A42]/65 to-transparent" />
       <div className="relative mx-auto grid min-h-[680px] max-w-[1440px] items-end px-5 pb-14 sm:px-8 sm:pb-16 lg:min-h-[750px] lg:grid-cols-[minmax(0,1.1fr)_minmax(310px,.65fr)] lg:px-12 lg:pb-20">
