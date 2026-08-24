@@ -22,3 +22,4 @@
 - [x] Incorporar a publicação autorizada da Filipa António num leitor de vídeo dentro do website.
 - [x] Reduzir a altura e aumentar a largura do leitor de vídeo da campanha.
 - [x] Ajustar o cartão do vídeo à proporção vertical original, sem faixas laterais.
+- [x] Atualizar o posicionamento e os conteúdos para compra e venda de ouro.
