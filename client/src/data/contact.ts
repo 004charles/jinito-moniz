@@ -1,17 +1,17 @@
-/** Arquitetura de Âmbar: contactos centralizados e preparados para a futura origem de dados. */
+/** Arquitetura de Âmbar: contactos públicos verificados, centralizados para futura origem de dados. */
 import type { ContactChannel } from "../types/content";
 
 export const contact = {
-  phone: { label: "Telefone", value: "Número a configurar", isConfigured: false } satisfies ContactChannel,
-  whatsapp: { label: "WhatsApp", value: "Número a configurar", isConfigured: false } satisfies ContactChannel,
-  email: { label: "E-mail", value: "E-mail a configurar", isConfigured: false } satisfies ContactChannel,
-  address: { label: "Morada", value: "Morada a configurar", isConfigured: false } satisfies ContactChannel,
-  hours: "Segunda a sábado · Horário a confirmar",
-  whatsappNumber: "",
-  whatsappMessage: "Olá, gostaria de agendar uma avaliação para venda do meu ouro.",
+  phone: { label: "Telefone", value: "+244 942 516 456", isConfigured: true } satisfies ContactChannel,
+  whatsapp: { label: "WhatsApp", value: "+244 942 516 456", isConfigured: true } satisfies ContactChannel,
+  email: { label: "E-mail", value: "Contacto via WhatsApp", isConfigured: false } satisfies ContactChannel,
+  address: { label: "Localização", value: "Luanda, Angola", isConfigured: true } satisfies ContactChannel,
+  hours: "Horário a confirmar",
+  whatsappNumber: "244942516456",
+  whatsappMessage: "Olá, gostaria de vender o meu ouro e agendar uma avaliação.",
   socialLinks: [
-    { label: "Instagram", href: "#", isConfigured: false },
-    { label: "Facebook", href: "#", isConfigured: false },
+    { label: "Instagram", href: "https://www.instagram.com/jintimoniz_compra_de_ouro/", isConfigured: true },
+    { label: "Facebook", href: "https://www.facebook.com/100063836927115/", isConfigured: true },
     { label: "LinkedIn", href: "#", isConfigured: false },
   ],
 };

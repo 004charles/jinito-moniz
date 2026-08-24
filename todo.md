@@ -12,3 +12,7 @@
 - [x] Validar a atualização visual e técnica do frontend.
 - [ ] Inicializar o Git e publicar o estado atual no repositório GitHub 004charles/jinito-moniz.
 - [x] Reposicionar o hero, serviços, projetos e galeria para a especialidade exclusiva de compra de ouro.
+- [x] Corrigir a configuração de publicação na Vercel para servir o frontend Vite compilado.
+- [x] Migrar os ativos de imagem internos para ficheiros públicos compatíveis com a Vercel.
+- [x] Pesquisar fontes públicas oficiais do perfil @jintimoniz_compra_de_ouro.
+- [x] Atualizar o frontend apenas com contactos e informações verificadas da marca.
