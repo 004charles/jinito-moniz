@@ -5,6 +5,7 @@ import About from "../sections/About";
 import CTA from "../sections/CTA";
 import Contact from "../sections/Contact";
 import Differentials from "../sections/Differentials";
+import FilipaCampaign from "../sections/FilipaCampaign";
 import Footer from "../sections/Footer";
 import Gallery from "../sections/Gallery";
 import Hero from "../sections/Hero";
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <Projects />
         <Gallery />
+        <FilipaCampaign />
         <Differentials />
         <Stats />
         <Testimonials />

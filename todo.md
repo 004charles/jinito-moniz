@@ -16,3 +16,6 @@
 - [x] Migrar os ativos de imagem internos para ficheiros públicos compatíveis com a Vercel.
 - [x] Pesquisar fontes públicas oficiais do perfil @jintimoniz_compra_de_ouro.
 - [x] Atualizar o frontend apenas com contactos e informações verificadas da marca.
+- [x] Avaliar publicações públicas da Filipa relacionadas à marca e apresentar uma seleção antes de qualquer utilização.
+- [x] Aguardar confirmação e autorização explícita antes de adicionar fotos ou vídeos ao website.
+- [x] Integrar a publicação externa autorizada da Filipa António com crédito e ligação à fonte original.
